@@ -1,0 +1,1101 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background-color: #ffffff;
+}
+
+.logo {
+    color: #176b68;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: #176b68;
+}
+
+.book-btn,
+.explore-btn {
+    background-color: #176b68;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 500px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("images/sea.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.hero-content h3 {
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+/* BOOKING SECTION */
+.booking {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 25px;
+    padding: 30px;
+    background-color: #f3f6f4;
+}
+
+.booking-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.booking input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking button {
+    padding: 12px 20px;
+    background-color: #176b68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* AMENITIES */
+.amenities,
+.featured-rooms {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.amenities h2,
+.featured-rooms h2 {
+    margin-bottom: 30px;
+    color: #176b68;
+}
+
+.amenity-container,
+.room-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.amenity-card,
+.room-card {
+    flex: 1;
+    min-width: 200px;
+    padding: 25px;
+    background-color: #f3f6f4;
+    border-radius: 8px;
+}
+
+.amenity-card p {
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+/* ROOM IMAGES */
+.room-image {
+    height: 180px;
+    width: 100%;
+    background-color: #d8e5df;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.room-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #176b68;
+}
+
+/* FOOTER */
+footer {
+    background-color: #164d4b;
+    color: white;
+    padding: 40px 8% 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .navbar,
+    .booking {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* ROOMS & RATES PAGE */
+
+/* PAGE BANNER */
+.rooms-banner {
+    min-height: 300px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+    ), url("images/sea.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.rooms-banner h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.rooms-banner p {
+    font-size: 18px;
+}
+
+/* ALL ROOMS */
+.all-rooms {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.all-rooms h2 {
+    color: #176b68;
+    margin-bottom: 35px;
+}
+
+/* ROOM CONTAINER */
+.all-room-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ROOM CARDS */
+.all-room-card {
+    background-color: #f3f6f4;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.all-room-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.all-room-info {
+    padding: 22px;
+}
+
+.all-room-info h3 {
+    color: #176b68;
+    margin-bottom: 12px;
+}
+
+.all-room-info p {
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.all-room-info h4 {
+    margin-bottom: 18px;
+}
+
+.all-room-info a {
+    display: inline-block;
+    background-color: #176b68;
+    color: white;
+    padding: 11px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* MOBILE ROOM LAYOUT */
+@media (max-width: 768px) {
+    .all-room-container {
+        grid-template-columns: 1fr;
+    }
+
+    .rooms-banner h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* ROOMS & RATES WIREFRAME LAYOUT */
+
+.rooms-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 8% 25px;
+}
+
+.rooms-heading h1 {
+    color: #176b68;
+    font-size: 28px;
+}
+
+.rooms-heading p {
+    font-size: 13px;
+}
+
+.rooms-heading a {
+    color: #176b68;
+    text-decoration: none;
+}
+
+.rooms-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 25px;
+    padding: 0 8% 60px;
+}
+
+/* FILTER SIDEBAR */
+.filters {
+    background-color: #f3f6f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.filters h3 {
+    margin-bottom: 30px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.filter-group label {
+    font-size: 14px;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* HORIZONTAL ROOM LISTINGS */
+.room-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.room-list-card {
+    display: grid;
+    grid-template-columns: 170px 1fr 170px;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.room-list-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.room-description h3 {
+    color: #176b68;
+    margin-bottom: 12px;
+}
+
+.room-description p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.room-description small {
+    color: #666;
+}
+
+.room-price {
+    text-align: right;
+}
+
+.room-price h3 {
+    color: #176b68;
+    margin-bottom: 5px;
+}
+
+.room-price p {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.room-price a {
+    display: inline-block;
+    background-color: #176b68;
+    color: white;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+    .rooms-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .rooms-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .room-list-card {
+        grid-template-columns: 1fr;
+    }
+
+    .room-price {
+        text-align: left;
+    }
+}
+
+
+/* AMENITIES PAGE */
+
+/* AMENITIES BANNER */
+.amenities-banner {
+    min-height: 250px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("images/sea.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.amenities-banner h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.amenities-banner p {
+    font-size: 17px;
+}
+
+/* AMENITIES CONTENT */
+.amenities-page {
+    padding: 45px 8%;
+}
+
+.amenities-page > h2 {
+    color: #176b68;
+    margin-bottom: 25px;
+}
+
+/* TWO-COLUMN AMENITIES GRID */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 25px;
+}
+
+/* AMENITY CARDS */
+.amenity-page-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    min-height: 145px;
+    background-color: #f3f6f4;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.amenity-icon {
+    width: 95px;
+    height: 95px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dce9e5;
+    border-radius: 5px;
+    font-size: 38px;
+}
+
+.amenity-details h3 {
+    color: #176b68;
+    margin-bottom: 12px;
+}
+
+.amenity-details p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* BOOKING CALL TO ACTION */
+.amenities-cta {
+    text-align: center;
+    padding: 40px 15px;
+    margin-top: 25px;
+}
+
+.amenities-cta h2 {
+    color: #176b68;
+    margin-bottom: 20px;
+}
+
+.amenities-cta a {
+    display: inline-block;
+    background-color: #176b68;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* AMENITIES MOBILE LAYOUT */
+@media (max-width: 768px) {
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amenity-page-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .amenities-banner h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* GALLERY PAGE */
+
+/* GALLERY BANNER */
+.gallery-banner {
+    min-height: 230px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("images/sea.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.gallery-banner h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.gallery-banner p {
+    font-size: 17px;
+}
+
+/* GALLERY SECTION */
+.gallery-section {
+    padding: 35px 8% 60px;
+}
+
+.gallery-section h2 {
+    color: #176b68;
+    margin-bottom: 20px;
+}
+
+/* CATEGORY BUTTONS */
+.gallery-categories {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.gallery-categories button {
+    min-width: 100px;
+    padding: 10px 20px;
+    background-color: #f3f6f4;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+}
+
+.gallery-categories button.active,
+.gallery-categories button:hover {
+    background-color: #176b68;
+    color: white;
+}
+
+/* PHOTO GRID */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* GALLERY MOBILE LAYOUT */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item {
+        height: 160px;
+    }
+
+    .gallery-banner h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* BOOKING PAGE */
+
+/* BOOKING BANNER */
+.booking-banner {
+    min-height: 200px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("images/sea.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.booking-banner h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.booking-banner p {
+    font-size: 17px;
+}
+
+/* TWO-COLUMN BOOKING LAYOUT */
+.booking-page-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 25px;
+    padding: 35px 8%;
+}
+
+/* RESERVATION FORM */
+.reservation-form {
+    border: 1px solid #ccc;
+    padding: 22px;
+    background-color: white;
+}
+
+.reservation-form h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #176b68;
+}
+
+.reservation-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.reservation-field label {
+    font-size: 14px;
+}
+
+.reservation-field input,
+.reservation-field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+}
+
+.confirm-booking {
+    width: 100%;
+    padding: 14px;
+    background-color: #176b68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* HELP PANEL */
+.booking-help {
+    background-color: #f3f6f4;
+    border: 1px solid #ddd;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.booking-help h2 {
+    color: #176b68;
+    margin-bottom: 20px;
+}
+
+.booking-help p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.booking-help a {
+    display: inline-block;
+    width: 80%;
+    padding: 13px;
+    border: 1px solid #176b68;
+    color: #176b68;
+    background-color: white;
+    text-decoration: none;
+}
+
+/* BOOKING POLICIES */
+.booking-policies {
+    padding: 0 8% 35px;
+}
+
+.booking-policies h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #176b68;
+}
+
+.booking-policies p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* MOBILE BOOKING LAYOUT */
+@media (max-width: 768px) {
+    .booking-page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-banner h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* CONTACT PAGE */
+
+/* CONTACT BANNER */
+.contact-banner {
+    min-height: 200px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("images/sea.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.contact-banner h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.contact-banner p {
+    font-size: 17px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    padding: 40px 8%;
+}
+
+/* CONTACT INFORMATION */
+.contact-info h2 {
+    color: #176b68;
+    margin-bottom: 25px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.contact-detail span {
+    width: 35px;
+    height: 35px;
+    background-color: #f3f6f4;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.contact-detail p {
+    font-size: 14px;
+}
+
+.follow-title {
+    margin-top: 35px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    background-color: #f3f6f4;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #176b68;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    border: 1px solid #ccc;
+    padding: 22px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.contact-field label {
+    font-size: 14px;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    border-radius: 3px;
+}
+
+.contact-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #176b68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-banner h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* ABOUT US PAGE */
+
+/* ABOUT BANNER */
+.about-banner {
+    min-height: 230px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("images/sea.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.about-banner h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.about-banner p {
+    font-size: 17px;
+}
+
+/* ABOUT INTRODUCTION */
+.about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    padding: 40px 8%;
+}
+
+.about-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    color: #176b68;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* HIGHLIGHTS SECTION */
+.about-highlights {
+    padding: 25px 8% 55px;
+    text-align: center;
+}
+
+.about-highlights h2 {
+    color: #176b68;
+    margin-bottom: 25px;
+}
+
+.highlight-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.highlight-card {
+    padding: 30px 20px;
+    background-color: #f3f6f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.highlight-card h3 {
+    color: #176b68;
+    margin-bottom: 15px;
+}
+
+.highlight-card p {
+    line-height: 1.6;
+}
+
+/* EXPLORE ROOMS BUTTON */
+.explore-rooms-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 25px;
+    background-color: #176b68;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.explore-rooms-btn:hover {
+    background-color: #164d4b;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+    .about-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-banner h1 {
+        font-size: 30px;
+    }
+}
